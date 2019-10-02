@@ -4,7 +4,7 @@ import random
 def secret_santa(names):
     random.shuffle(names)
     return {giver: receiver for giver, receiver in
-            zip(names, names[1:] + names[0:1])}
+            zip(names, names[1:] + names[:1])}
 
 
 if __name__ == "__main__":
